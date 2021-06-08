@@ -1,0 +1,46 @@
+.header{
+    display: flex;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.5)
+    );
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+    margin: 20px 100px;
+    border-radius: 20px;
+}
+
+
+.logo{
+    width: 40%;
+    margin-top: 10px;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+}
+.link{
+    margin: 0 20px;
+    list-style: none;
+    
+}
+
+.link a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    
+    color: #D27FFF;
+}
+
+.link a:hover{
+    color: #662D91;
+    text-decoration: underline 2px;
+    transition: ease-in-out 0.4s;
+}
