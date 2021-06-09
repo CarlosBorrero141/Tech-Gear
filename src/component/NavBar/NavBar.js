@@ -1,31 +1,27 @@
 import React from "react";
 import logo from "./logo.png";
 import "./NavBar.css";
+import Menu from "../Menu/Menu.js";
+import CartWidget from "../CartWidget/CartWidget.js";
 
 class NavBar extends React.Component {
   render() {
     return (
-      <header className="header">
-        <div>
-          <img src={logo} alt="" className="logo" />
+      <header >
+        <br />
+        <div className="header">
+          <a href="">
+            <img src={logo} alt="" className="logo" />
+          </a>
+          <Menu
+          link1={'Home'}
+          link2={'Tienda'}
+          link3={'Promociones'}
+          link4={'Contacto'}
+          />
+        <CartWidget />
         </div>
-
-        <div>
-          <ul className="navegacion">
-            <li className='link'>
-              <a href="">Home</a>
-            </li>
-            <li className='link'>
-              <a href="">Tienda</a>
-            </li>
-            <li className='link'>
-              <a href="">Promociones</a>
-            </li>
-            <li className='link'>
-              <a href="">Contacto</a>
-            </li>
-          </ul>
-        </div>
+        
       </header>
     );
   }

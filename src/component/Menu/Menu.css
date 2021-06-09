@@ -1,0 +1,24 @@
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+}
+.link{
+    margin: 0 20px;
+    list-style: none;
+    
+}
+
+.link a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    
+    color: #D27FFF;
+}
+
+.link a:hover{
+    color: #662D91;
+    transition: ease-in-out 0.4s;
+}
