@@ -1,16 +1,19 @@
 import React from 'react'
 import CardItem from '../CardItem/CardItem.js'
-import './ListItems.css'
+import './ItemList.css'
+import ItemCount from '../ItemCount/ItemCount.js'
 
-function ListItems() {
+function ItemList() {
     return (
         <div className='List'>
             <CardItem/>
             <CardItem/>
             <CardItem/>
             <CardItem/>
+            
+            
         </div>
     )
 }
 
-export default ListItems
+export default ItemList

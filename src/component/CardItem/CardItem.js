@@ -1,20 +1,13 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import "./CardItem.css";
+import ItemCount from "../ItemCount/ItemCount";
 
 function CardItem  () {
 
-  const [cantidad, setCantidad] = React.useState(0);
-
-  const sumar = () => {
-    setCantidad(cantidad + 1)
-  }
-    const restar = () => {
-      setCantidad(cantidad - 1);
-    };
-  
-
  
+
+
   return (
     <div className="cardList">
       <Card>
@@ -33,9 +26,7 @@ function CardItem  () {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <button onClick={sumar}>+</button>
-          <p>{cantidad}</p>
-          <button onClick={restar}>-</button>
+          <ItemCount stock= {5} initial={1}/>
         </Card.Content>
       </Card>
     </div>
