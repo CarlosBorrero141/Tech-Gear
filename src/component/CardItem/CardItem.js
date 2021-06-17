@@ -4,7 +4,9 @@ import "./CardItem.css";
 import ItemCount from "../ItemCount/ItemCount";
 
 function CardItem  () {
-
+  const onAdd = (cantidad) => {
+    console.log(cantidad)
+}
  
 
 
@@ -26,7 +28,7 @@ function CardItem  () {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <ItemCount stock= {5} initial={1}/>
+          <ItemCount stock= {5} initial={1} onAdd={onAdd}/>
         </Card.Content>
       </Card>
     </div>
