@@ -47,7 +47,7 @@ function ItemList() {
         <div className='List'>
             
             {productos.map(prod => 
-            <h5>{prod.productName}</h5>
+            <img src={prod.imagen} alt="" />
             )}
             
             
