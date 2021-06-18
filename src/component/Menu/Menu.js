@@ -6,16 +6,16 @@ function Menu({link1, link2, link3, link4}) {
     <div>
       <ul className="navegacion">
         <li className="link">
-          <a href="">{link1}</a>
+          <a href="/">{link1}</a>
         </li>
         <li className="link">
-          <a href="">{link2}</a>
+          <a href="/">{link2}</a>
         </li>
         <li className="link">
-          <a href="">{link3}</a>
+          <a href="/">{link3}</a>
         </li>
         <li className="link">
-          <a href="">{link4}</a>
+          <a href="/">{link4}</a>
         </li>
       </ul>
     </div>

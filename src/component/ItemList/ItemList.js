@@ -1,55 +1,31 @@
 import React, {useEffect, useState} from 'react'
 import CardItem from '../CardItem/CardItem.js'
 import './ItemList.css'
-
+import axios from 'axios'
 
 function ItemList() {
 
-    const [productos, setproductos] = useState([])
+    const [productos, setProductos] = useState([])
 
     useEffect(() => {
-        const prom = new Promise((resolve, reject) =>{
-            setTimeout(()=>{
-                resolve([
-                    {
-                        "id": 1,
-                        "productName": "DRAGONBORN K630",
-                        "description": "Pequeño, pero temible. El Dragonborn es un teclado mecánico 60%, compacto y súper transportable, con prestaciones óptimas para el juego competitivo de alto nivel: switches Redragon Brown, tecla Fn, bloqueo de tecla de Windows, cable desmontable y la mejor calidad de construcción. Más la debida iluminación RGB, por supuesto.",
-                        "precio": "$200",
-                        "imagen": "https://redragonla.com/wp-content/uploads/2021/04/K630RGB-PNGHQ-4-1-512x512.png"
-                      },
-                      {
-                        "id": 2,
-                        "productName": "DRAGONBORN K630",
-                        "description": "Pequeño, pero temible. El Dragonborn es un teclado mecánico 60%, compacto y súper transportable, con prestaciones óptimas para el juego competitivo de alto nivel: switches Redragon Brown, tecla Fn, bloqueo de tecla de Windows, cable desmontable y la mejor calidad de construcción. Más la debida iluminación RGB, por supuesto.",
-                        "precio": "$200",
-                        "imagen": "https://redragonla.com/wp-content/uploads/2020/09/K568_HQ_1-1-512x512.png"
-                      },
-                      {
-                        "id": 3,
-                        "productName": "DRAGONBORN K630",
-                        "description": "Pequeño, pero temible. El Dragonborn es un teclado mecánico 60%, compacto y súper transportable, con prestaciones óptimas para el juego competitivo de alto nivel: switches Redragon Brown, tecla Fn, bloqueo de tecla de Windows, cable desmontable y la mejor calidad de construcción. Más la debida iluminación RGB, por supuesto.",
-                        "precio": "$200",
-                        "imagen": "https://redragonla.com/wp-content/uploads/2020/08/55-100-138_04-512x512.png"
-                      }
-                ])
-            }, 2000)
-           
-            })
-            prom.then((resultado)=>{
-                setproductos(resultado);
-        })
-    },[]) 
+        setTimeout(2000);
+        axios(
+            'https://my-json-server.typicode.com/CarlosBorrero141/tech-gear-products/products'
+        )
+       
+        .then((res)=> setProductos(res.data));
+    },[]) ;
 
 
 
     return (
         <div className='List'>
             
-            {productos.map(prod => 
-            <img src={prod.imagen} alt="" />
-            )}
-            
+            {productos.map((prod) =>{
+                return(
+                    <CardItem prods = {prod} key = {prod.id}/>
+                )
+            })}
             
         </div>
     )

@@ -30,16 +30,16 @@ function ItemCount({ stock, initial, onAdd }) {
   return (
     <div>
         <div className='itemCounter'>
-      <button disabled={disabledsum} onClick={sumar}>
+      <button className='btn' disabled={disabledsum} onClick={sumar}>
         +
-      </button>
+      </button >
       <p>{cantidad}</p>
-      <button disabled={disabledres} onClick={restar}>
+      <button className='btn' disabled={disabledres} onClick={restar}>
         -
       </button>
       </div>
     <br />
-      <button onClick={()=>onAdd(cantidad)}>
+      <button className='btn' onClick={()=>onAdd(cantidad)}>
           Agregar a Carrito
       </button>
     </div>

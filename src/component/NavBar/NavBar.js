@@ -10,7 +10,7 @@ class NavBar extends React.Component {
       <header >
         <br />
         <div className="header">
-          <a href="">
+          <a href="/">
             <img src={logo} alt="" className="logo" />
           </a>
           <Menu

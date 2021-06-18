@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 import "./CardItem.css";
 import ItemCount from "../ItemCount/ItemCount";
 
-function CardItem  () {
+function CardItem  ({prods}) {
   const onAdd = (cantidad) => {
-    console.log(cantidad)
+    console.log(cantidad +" "+ prods.productName)
 }
  
 
@@ -14,17 +14,17 @@ function CardItem  () {
     <div className="cardList">
       <Card>
         <Image
-          src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+          src={prods.imagen}
           wrapped
           ui={false}
         />
         <Card.Content>
-          <Card.Header>Matthew</Card.Header>
+          <Card.Header className='nombre'>{prods.productName}</Card.Header>
           <Card.Meta>
-            <span className="date">Joined in 2015</span>
+            {prods.precio}
           </Card.Meta>
           <Card.Description>
-            Matthew is a musician living in Nashville.
+            {prods.description}
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
@@ -36,3 +36,5 @@ function CardItem  () {
 };
 
 export default CardItem;
+
+
