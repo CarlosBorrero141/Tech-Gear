@@ -1,0 +1,40 @@
+.details{
+    margin-top: 50px;
+}
+
+.details h2{
+    color: white;
+}
+
+.itemDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:1000px){
+    .itemDetails{
+        flex-direction: column;
+    }
+}
+
+.itemDetails h3, p, h4{
+    color: white;
+}
+
+.productImg{
+    width: 80%;
+}
+
+.productName{
+    margin: 50px auto;
+}
+
+.productDescription{
+    margin: 20px 50px;
+}
+
+.productPrice{
+    margin: 50px auto;
+}
