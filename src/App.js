@@ -1,16 +1,29 @@
 import './App.css';
 import NavBar from './component/NavBar/NavBar'
-import ItemListContainer from './component/ItemListContainer/ItemListContainer';
+import Home from './views/Home/Home';
 import 'semantic-ui-css/semantic.min.css'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Promociones from './views/Promociones/Promociones';
+import Categorias from './views/Categories/Categorias';
+import Contacto from './views/Contact/Contacto';
+import Detail from './views/Detail/Detail';
 
 
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <NavBar />
-      <ItemListContainer />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/promociones' component={Promociones} />
+        <Route path='/categorias' component={Categorias} />
+        <Route path='/contacto' component={Contacto} />
+        <Route path='/detail/:id' component={Detail} />
+      </Switch>
     </div>
+    </Router>
   );
 }
 

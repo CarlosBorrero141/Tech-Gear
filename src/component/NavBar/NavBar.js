@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.png";
 import "./NavBar.css";
 import Menu from "../Menu/Menu.js";
+import {Link} from 'react-router-dom'
 
 
 class NavBar extends React.Component {
@@ -10,15 +11,11 @@ class NavBar extends React.Component {
       <header >
         <br />
         <div className="header">
-          <a href="/">
+          <Link to='/'>
             <img src={logo} alt="" className="logo" />
-          </a>
-          <Menu
-          link1={'Home'}
-          link2={'Tienda'}
-          link3={'Promociones'}
-          link4={'Contacto'}
-          />
+          </Link>
+          
+          <Menu/>
        
         </div>
         

@@ -16,19 +16,20 @@
     margin: 0 20px;
     list-style: none;
     align-self: center;
-    
-}
-
-.link a{
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     
     font-size: 22px;
     
     color: #D27FFF;
+    
 }
 
-.link a:hover{
+
+
+.link:hover{
     color: #3c1b55;
     transition: ease-in-out 0.4s;
 }
+
+
