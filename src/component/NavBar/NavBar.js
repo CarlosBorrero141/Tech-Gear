@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.png";
 import "./NavBar.css";
 import Menu from "../Menu/Menu.js";
-import CartWidget from "../CartWidget/CartWidget.js";
+
 
 class NavBar extends React.Component {
   render() {
@@ -19,7 +19,7 @@ class NavBar extends React.Component {
           link3={'Promociones'}
           link4={'Contacto'}
           />
-        <CartWidget />
+       
         </div>
         
       </header>

@@ -23,9 +23,7 @@ function CardItem  ({prods}) {
           <Card.Meta>
             {prods.precio}
           </Card.Meta>
-          <Card.Description>
-            {prods.description}
-          </Card.Description>
+          
         </Card.Content>
         <Card.Content extra>
           <ItemCount stock= {5} initial={1} onAdd={onAdd}/>

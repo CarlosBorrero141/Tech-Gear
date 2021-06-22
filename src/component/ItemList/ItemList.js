@@ -8,7 +8,7 @@ function ItemList() {
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
-        setTimeout(2000);
+        
         axios(
             'https://my-json-server.typicode.com/CarlosBorrero141/tech-gear-products/products'
         )

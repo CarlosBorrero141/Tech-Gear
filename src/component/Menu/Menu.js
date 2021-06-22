@@ -1,5 +1,6 @@
 import React from "react";
 import "./Menu.css";
+import CartWidget from "../CartWidget/CartWidget.js";
 
 function Menu({link1, link2, link3, link4}) {
   return (
@@ -17,7 +18,12 @@ function Menu({link1, link2, link3, link4}) {
         <li className="link">
           <a href="/">{link4}</a>
         </li>
+        <li className="link">
+        <CartWidget />
+        </li>
+        
       </ul>
+      
     </div>
   );
 }
