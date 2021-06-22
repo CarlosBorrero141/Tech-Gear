@@ -17,8 +17,7 @@ function Detail({match}) {
         })
     },[itemID])
   
-    console.log('MATCH', match)
-    console.log(item)
+
     return (
         <div className='details'>
             <h2>Detalle producto</h2>

@@ -16,3 +16,9 @@
 .card{
   background: black;
 }
+
+.btn{
+  color: #ffff  !important;
+  background-color: rgb(102, 45, 145)!important;
+  justify-self: center;
+}

@@ -7,10 +7,10 @@ function Menu() {
   return (
     <div>
       <div className="navegacion">
-        <NavLink className='link' activeStyle={{color: "#3c1b55"}} exact to='/'>Inicio</NavLink>
-        <NavLink className='link' activeStyle={{color: "#3c1b55"}} to='/promociones'>Promociones</NavLink>
-        <NavLink className='link' activeStyle={{color: "#3c1b55"}} to='/categorias'>Catergorias</NavLink>
-        <NavLink className='link' activeStyle={{color: "#3c1b55"}} to='/contacto'>Contacto</NavLink>
+        <NavLink className='link' activeStyle={{color: "#ffff"}} exact to='/'>Inicio</NavLink>
+        <NavLink className='link' activeStyle={{color: "#ffff"}} to='/promociones'>Promociones</NavLink>
+        <NavLink className='link' activeStyle={{color: "#ffff"}} to='/categorias'>Catergorias</NavLink>
+        <NavLink className='link' activeStyle={{color: "#ffff"}} to='/contacto'>Contacto</NavLink>
         <li className="link">
         <CartWidget />
         </li>

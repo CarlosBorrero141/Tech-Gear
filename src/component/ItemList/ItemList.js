@@ -24,9 +24,9 @@ function ItemList() {
             
             {productos.map((prod) =>{
                 return(
-                    <Link to={`/detail/${prod.id}`}>
+                    
                     <CardItem prods = {prod} key = {prod.id}/>
-                    </Link>
+                    
                 )
             })}
             

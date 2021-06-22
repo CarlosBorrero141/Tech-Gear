@@ -2,6 +2,8 @@ import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import "./CardItem.css";
 import ItemCount from "../ItemCount/ItemCount";
+import {Link} from 'react-router-dom'
+
 
 function CardItem  ({prods}) {
   const onAdd = (cantidad) => {
@@ -12,14 +14,18 @@ function CardItem  ({prods}) {
 
   return (
     <div className="cardList">
+      
       <Card>
+        
         <Image
           src={prods.imagen}
           wrapped
           ui={false}
         />
         <Card.Content>
+       
           <Card.Header className='nombre'>{prods.productName}</Card.Header>
+          
           <Card.Meta>
             {prods.precio}
           </Card.Meta>
@@ -28,7 +34,14 @@ function CardItem  ({prods}) {
         <Card.Content extra>
           <ItemCount stock= {5} initial={1} onAdd={onAdd}/>
         </Card.Content>
+
+        <Card.Content extra>
+        <Link to={`/detail/${prods.id}`}>
+          <button className='btn'>Detalles</button>
+        </Link>
+        </Card.Content>
       </Card>
+     
     </div>
   );
 };
