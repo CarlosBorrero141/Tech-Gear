@@ -1,9 +1,10 @@
 import React from 'react'
+import CategoriaListContainer from '../../component/CategoriasListContainer/CategoriaListContainer'
 
 function Categorias() {
     return (
         <div>
-            <h1>Categorias</h1>
+            <CategoriaListContainer/>
         </div>
     )
 }

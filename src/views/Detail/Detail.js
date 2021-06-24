@@ -1,12 +1,10 @@
-
 import './Details.css'
-import ItemDetail from '../../component/ItemDetail/ItemDetail.js'
-
+import ItemDetailContainer from '../../component/ItemDetailContainer/ItemDetailContainer'
 
 function Detail({match}) {
     let ID = match.params.id
     return(
-        <ItemDetail productId={ID} />
+        <ItemDetailContainer Pid={ID} />
     )
 }
 export default Detail
