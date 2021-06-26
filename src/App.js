@@ -7,6 +7,7 @@ import Promociones from './views/Promociones/Promociones';
 import Categorias from './views/Categories/Categorias';
 import Contacto from './views/Contact/Contacto';
 import Detail from './views/Detail/Detail';
+import Cart from './views/Cart/Cart';
 
 
 
@@ -21,6 +22,8 @@ function App() {
         <Route path='/categorias' component={Categorias} />
         <Route path='/contacto' component={Contacto} />
         <Route path='/detail/:id' component={Detail} />
+        <Route path='/cart' component={Cart} />
+
       </Switch>
     </div>
     </Router>

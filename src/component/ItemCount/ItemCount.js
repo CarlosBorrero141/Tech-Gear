@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ItemCount.css"
+import {Link} from 'react-router-dom'
 
-function ItemCount({ stock, initial, onAdd }) {
-  const [cantidad, setCantidad] = React.useState(initial);
-  const [disabledsum, setDisabledsum] = React.useState(false);
-  const [disabledres, setDisabledres] = React.useState(false);
+function ItemCount({ stock, initial, onAdd, boton, link }) {
+  const [cantidad, setCantidad] = useState(initial);
+  const [disabledsum, setDisabledsum] = useState(false);
+  const [disabledres, setDisabledres] = useState(false);
+  
   
   
   const sumar = () => {
@@ -27,6 +29,8 @@ function ItemCount({ stock, initial, onAdd }) {
 
  
 
+ 
+
   return (
     <div>
         <div className='itemCounter'>
@@ -39,9 +43,11 @@ function ItemCount({ stock, initial, onAdd }) {
       </button>
       </div>
     <br />
-      <button className='btn' onClick={()=>onAdd(cantidad)}>
-          Agregar a Carrito
-      </button>
+    <Link to={link} className='btn' onClick={()=>onAdd(cantidad)}>
+     
+          {boton}
+     
+      </Link>
     </div>
   );
 }

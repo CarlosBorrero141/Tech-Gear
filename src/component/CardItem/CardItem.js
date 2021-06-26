@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Card, Image } from "semantic-ui-react";
 import "./CardItem.css";
 import ItemCount from "../ItemCount/ItemCount";
@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 function CardItem  ({prods}) {
+  
   const onAdd = (cantidad) => {
     console.log(cantidad +" "+ prods.productName)
 }
@@ -32,7 +33,7 @@ function CardItem  ({prods}) {
           
         </Card.Content>
         <Card.Content extra>
-          <ItemCount stock= {5} initial={1} onAdd={onAdd}/>
+          <ItemCount stock= {5} initial={1} onAdd={onAdd} boton={'Anadir a Carrito'}/>
         </Card.Content>
 
         <Card.Content extra>

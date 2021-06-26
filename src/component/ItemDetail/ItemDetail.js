@@ -4,10 +4,15 @@ import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
 function ItemDetail({productId}) {
+    const [boton, setBoton] = useState('Añadir al Carrito')
+    const [link, setlink] = useState('#')
     let itemID = productId
     const [item, setitem] = useState({})
     const onAdd = (cantidad) => {
-        console.log(cantidad +" "+ item.productName)
+        setBoton('Finalizar Compra');
+        if(boton == 'Finalizar Compra'){
+            setlink('/cart')
+        }else{alert(cantidad +" "+ item.productName);}
     }
     
 
@@ -29,7 +34,13 @@ function ItemDetail({productId}) {
                     <h3 className='productName'>{item.productName}</h3>
                     <p className='productDescription'>{item.description}</p>
                     <h4 className='productPrice'>{item.precio}</h4>
-                    <ItemCount stock= {5} initial={1} onAdd={onAdd}/>
+                    <ItemCount 
+                    stock= {5} 
+                    initial={1} 
+                    onAdd={onAdd} 
+                    boton={boton}
+                    link={link}
+                    />
                 </div>
             </div>
         </div>
