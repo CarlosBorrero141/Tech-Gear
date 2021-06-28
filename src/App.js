@@ -8,11 +8,13 @@ import Categorias from './views/Categories/Categorias';
 import Contacto from './views/Contact/Contacto';
 import Detail from './views/Detail/Detail';
 import Cart from './views/Cart/Cart';
+import {CartProvider} from './context/CartContext';
 
 
 
 function App() {
   return (
+    <CartProvider>
     <Router>
     <div className="App">
       <NavBar />
@@ -27,6 +29,7 @@ function App() {
       </Switch>
     </div>
     </Router>
+    </CartProvider>
   );
 }
 
