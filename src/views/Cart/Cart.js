@@ -11,7 +11,7 @@ function Cart() {
                 return (
                   <div key={item.item.id} className='contenedorCart'>
                     <img src={item.item.imagen} alt="imagen prod" className='imgCart' />
-                    <div>
+                    <div className='cartProductText'>
                         <h2>{item.item.productName}</h2>
                         <div>
                             <h5>{item.cant}</h5>
