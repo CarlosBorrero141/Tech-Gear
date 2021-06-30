@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import CardItem from '../CardItem/CardItem.js'
 import './PromocionesList.css'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+
 
 function PromocionesList() {
 
@@ -25,12 +25,14 @@ function PromocionesList() {
             
             
             {productos.map((prod) =>{
-                if(prod.promocion == true){
+                if(prod.promocion === true){
                 return(
                     
                     <CardItem prods = {prod} key = {prod.id}/>
                     
                 )
+            }else{
+                return null
             }})}
             
         </div>

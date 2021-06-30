@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import "./CardItem.css";
 import ItemCount from "../ItemCount/ItemCount";

@@ -1,18 +1,25 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import axios from 'axios'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import { CartContext} from "../../context/CartContext";
 
 function ItemDetail({productId}) {
+    const {cart, handleAdd} = useContext(CartContext)
     const [boton, setBoton] = useState('Añadir al Carrito')
     const [link, setlink] = useState('#')
     let itemID = productId
     const [item, setitem] = useState({})
     const onAdd = (cantidad) => {
         setBoton('Finalizar Compra');
-        if(boton == 'Finalizar Compra'){
+        if(boton === 'Finalizar Compra'){
             setlink('/cart')
-        }else{alert(cantidad +" "+ item.productName);}
+        }else{
+            // alert(cantidad +" "+ item.productName);
+            handleAdd(item, cantidad);
+            console.log(cart);
+            
+        }
     }
     
 

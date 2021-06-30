@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import CardItem from '../CardItem/CardItem.js'
 import './ItemList.css'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+
 
 function ItemList() {
 

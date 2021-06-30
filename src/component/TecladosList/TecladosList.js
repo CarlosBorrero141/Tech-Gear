@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import CardItem from '../CardItem/CardItem.js'
 import './TecladosList.css'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+
 
 function TecladosList() {
 
@@ -25,12 +25,14 @@ function TecladosList() {
             
             
             {productos.map((prod) =>{
-                if(prod.categoria == 'teclado'){
+                if(prod.categoria === 'teclado'){
                 return(
                     
                     <CardItem prods = {prod} key = {prod.id}/>
                     
                 )
+            }else{
+                return null
             }})}
             
         </div>
