@@ -1,19 +1,17 @@
-import React, {useState} from "react";
-import "./ItemCount.css"
-import {Link} from 'react-router-dom'
+import React, { useState } from "react";
+import "./ItemCount.css";
+import { Link } from "react-router-dom";
 
 function ItemCount({ stock, initial, onAdd, boton, link }) {
   const [cantidad, setCantidad] = useState(initial);
   const [disabledsum, setDisabledsum] = useState(false);
   const [disabledres, setDisabledres] = useState(false);
-  
-  
-  
+
   const sumar = () => {
-    if (cantidad < stock ) {
+    if (cantidad < stock) {
       setCantidad(cantidad + 1);
-      
-      setDisabledres(false)
+
+      setDisabledres(false);
     } else {
       setDisabledsum(true);
     }
@@ -27,29 +25,27 @@ function ItemCount({ stock, initial, onAdd, boton, link }) {
     }
   };
 
- 
-
- 
-
   return (
     <div>
-        <div className='itemCounter'>
-      <button className='btn' disabled={disabledsum} onClick={sumar}>
-        +
-      </button >
-      <p>{cantidad}</p>
-      <button className='btn' disabled={disabledres} onClick={restar}>
-        -
-      </button>
+      <div className="itemCounter">
+        <button className="btn" disabled={disabledsum} onClick={sumar}>
+          +
+        </button>
+        <p>{cantidad}</p>
+        <button className="btn" disabled={disabledres} onClick={restar}>
+          -
+        </button>
       </div>
-    <br />
-    <Link to={link} className='btn' onClick={()=>onAdd(cantidad)}>
-     
-          {boton}
-     
+      <br />
+      <Link to={link}>
+        <button  className="btn" onClick={() => onAdd(cantidad)}> {boton}</button>
       </Link>
     </div>
   );
+}
+
+Link.defaultProps ={
+  to: '#'
 }
 
 export default ItemCount;

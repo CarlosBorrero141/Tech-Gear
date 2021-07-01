@@ -12,14 +12,11 @@ function ItemDetail({productId}) {
     const [item, setitem] = useState({})
     const onAdd = (cantidad) => {
         setBoton('Finalizar Compra');
-        if(boton === 'Finalizar Compra'){
-            setlink('/cart')
-        }else{
-            // alert(cantidad +" "+ item.productName);
+        setlink('/cart')
+        if (boton === 'Añadir al Carrito'){
             handleAdd(item, cantidad);
-            console.log(cart);
-            
         }
+        
     }
     
 

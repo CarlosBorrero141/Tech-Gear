@@ -10,13 +10,25 @@ export const CartProvider = ({defaultValue=[], children}) => {
     
     
      const handleAdd = (item, cant)=>{
+         if (cart.length !== 0){
+             setcart([{item, cant}])
+         }
          setcart([...cart,{item, cant}])
+     }
+
+     const removeFromCart = (itemID) => {
+        const newItems = cart.filter((item) => item.id !== itemID)
+        setcart(newItems);
+     }
+
+     const clearCart = () => {
+        setcart(defaultValue);
      }
 
 
 
     return(
-        <CartContext.Provider value={{cart, handleAdd}}>
+        <CartContext.Provider value={{cart, handleAdd, removeFromCart, clearCart}}>
             {children}
         </CartContext.Provider>
     )
