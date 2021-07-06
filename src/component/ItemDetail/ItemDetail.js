@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import { CartContext} from "../../context/CartContext";
 
 function ItemDetail({productId}) {
-    const {cart, handleAdd} = useContext(CartContext)
+    const {handleAdd} = useContext(CartContext)
     const [boton, setBoton] = useState('Añadir al Carrito')
     const [link, setlink] = useState('#')
     let itemID = productId

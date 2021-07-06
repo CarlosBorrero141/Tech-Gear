@@ -28,12 +28,13 @@ function ItemCount({ stock, initial, onAdd, boton, link }) {
   return (
     <div>
       <div className="itemCounter">
-        <button className="btn" disabled={disabledsum} onClick={sumar}>
-          +
+      <button className="btn" disabled={disabledres} onClick={restar}>
+          -
         </button>
         <p>{cantidad}</p>
-        <button className="btn" disabled={disabledres} onClick={restar}>
-          -
+
+        <button className="btn" disabled={disabledsum} onClick={sumar}>
+          +
         </button>
       </div>
       <br />
