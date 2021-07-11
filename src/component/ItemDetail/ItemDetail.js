@@ -35,8 +35,8 @@ function ItemDetail({productId}) {
                     <img className='productImg' src={item.imagen} alt="" />
                 </div>
                 <div>
-                    <h3 className='productName'>{item.productName}</h3>
-                    <p className='productDescription'>{item.description}</p>
+                    <h3 className='productName'>{item.nombre}</h3>
+                    <p className='productDescription'>{item.descripcion}</p>
                     <h4 className='productPrice'>{item.precio}</h4>
                     <ItemCount 
                     stock= {5} 
