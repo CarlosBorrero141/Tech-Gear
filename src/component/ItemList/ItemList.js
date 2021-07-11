@@ -16,16 +16,12 @@ function ItemList() {
                 docs.push({...doc.data(), id:doc.id})
             });
             console.log(docs)
+            setProductos(docs)
         })
     };
 
     useEffect(() => {
         getProducts();
-        axios(
-            'https://my-json-server.typicode.com/CarlosBorrero141/tech-gear-products/products'
-        )
-       
-        .then((res)=> setProductos(res.data));
     },[]) ;
 
 
