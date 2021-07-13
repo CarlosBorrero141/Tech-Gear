@@ -37,9 +37,14 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     setcart(defaultValue);
   };
 
+  const modifyCant = (itemID, cant) => {
+    const itemsModify = cart.find((item) => item.id !== itemID)
+    console.log(itemsModify);
+  }
+
   return (
     <CartContext.Provider
-      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems }}
+      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems, modifyCant }}
     >
       {children}
     </CartContext.Provider>
