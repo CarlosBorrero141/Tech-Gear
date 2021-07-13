@@ -19,7 +19,7 @@ function CartItems() {
               <h2>{item.item.nombre}</h2>
               <div>
               <ItemCount stock={5} initial={item.cant} />
-                <h5>{item.item.precio * item.cant}</h5>
+                <h5>${item.item.precio * item.cant}</h5>
               </div>
             </div>
           </div>
