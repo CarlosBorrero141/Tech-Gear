@@ -1,11 +1,23 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
+import BuyerForm from "../BuyerForm/BuyerForm";
 import ItemCount from "../ItemCount/ItemCount";
 import "./CartItems.css";
 
 function CartItems() {
   const { cart } = useContext(CartContext);
   const [cantidad, setcantidad] = useState(0)
+  const [showForm, setshowForm] = useState(false)
+  const [showButton, setshowButton] = useState(true)
+
+  const handleOnClick = () => {
+    setshowForm(true)
+    setshowButton(false)
+  }
+
+  const pagar = () => {
+    
+  }
 
  
   
@@ -24,7 +36,7 @@ function CartItems() {
               <h2>{item.item.nombre}</h2>
               <div>
               <ItemCount stock={5} initial={item.cant} boton={'Cambiar Cantidad'} />
-                <h5>${item.item.precio * item.cant}</h5>
+                <h5 style={{marginTop:'20px'}}>${item.item.precio * item.cant}</h5>
               </div>
             </div>
           </div>
@@ -34,8 +46,15 @@ function CartItems() {
         total = item.item.precio * item.cant + total;
         return null;
       })}
-      <h2>Prescio Total: ${total}</h2>
+      <h2>Precio Total: ${total}</h2>
       {console.log(total)}
+
+     
+
+      {showButton ? <button className='btn btn-finalizar' onClick={handleOnClick}>Finalizar Compra</button> : null}
+
+      {showForm ? <BuyerForm pagar = {pagar}/>: null}
+      
     </div>
   );
 }

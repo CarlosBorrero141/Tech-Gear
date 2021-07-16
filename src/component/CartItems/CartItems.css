@@ -17,8 +17,40 @@
 
 h2, h5{
     color: white;
+    
 }
 
 .cartProductText{
   margin: 0 auto;
 }
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.input{
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-indent: 10px;
+
+}
+
+.btn{
+    color: #ffff  !important;
+    background-color: rgb(102, 45, 145)!important;
+   
+}
+
+.btn-finalizar{
+    margin: 40px 0;
+}
+
+.btn-form{
+    margin: 40px 0;
+}
+

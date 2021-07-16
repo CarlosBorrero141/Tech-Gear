@@ -9,7 +9,7 @@ function Menu() {
       <div className="navegacion">
         <NavLink className='link' activeStyle={{color: "#ffff"}} exact to='/'>Inicio</NavLink>
         <NavLink className='link' activeStyle={{color: "#ffff"}} to='/promociones'>Promociones</NavLink>
-        <NavLink className='link' activeStyle={{color: "#ffff"}} to='/categorias'>Catergorias</NavLink>
+        <NavLink className='link' activeStyle={{color: "#ffff"}} to='/categorias'>Categorias</NavLink>
         <NavLink className='link' activeStyle={{color: "#ffff"}} to='/contacto'>Contacto</NavLink>
         <li className="link">
         <CartWidget />
