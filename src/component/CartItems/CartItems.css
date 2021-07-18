@@ -46,6 +46,10 @@ h2, h5{
    
 }
 
+.btn-margin{
+    margin: 0 10px;
+}
+
 .btn-finalizar{
     margin: 40px 0;
 }

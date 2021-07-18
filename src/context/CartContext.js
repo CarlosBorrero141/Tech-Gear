@@ -37,14 +37,27 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     setcart(defaultValue);
   };
 
-  const modifyCant = (itemID, cant) => {
+  const reduceCant = (itemID) => {
+    const reduceItem = cart.find((item) => item.id !== itemID)
+    let itemsCart = cantItems;
+    reduceItem.cant --;
+    itemsCart --;
+    setcantItems(itemsCart)
+    console.log(reduceItem);
+  }
+
+  const addCant = (itemID) => {
     const itemsModify = cart.find((item) => item.id !== itemID)
+    let itemsCart = cantItems;
+    itemsModify.cant ++;
+    itemsCart ++;
+    setcantItems(itemsCart)
     console.log(itemsModify);
   }
 
   return (
     <CartContext.Provider
-      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems, modifyCant, setcart, defaultValue, setcantItems }}
+      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems, reduceCant, setcart, defaultValue, setcantItems, addCant }}
     >
       {children}
     </CartContext.Provider>

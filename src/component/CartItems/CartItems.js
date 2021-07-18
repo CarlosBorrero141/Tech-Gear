@@ -1,15 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 import BuyerForm from "../BuyerForm/BuyerForm";
-import ItemCount from "../ItemCount/ItemCount";
+
 import "./CartItems.css";
 import {db} from '../../firebase'
 
 function CartItems() {
-  const { cart, setcart, defaultValue, setcantItems } = useContext(CartContext);
+  const { cart, setcart, defaultValue, setcantItems, reduceCant, addCant } = useContext(CartContext);
   const [cantidad, setcantidad] = useState(0)
   const [showForm, setshowForm] = useState(false)
   const [showButton, setshowButton] = useState(true)
+  const [order, setorder] = useState(false)
   
   const handleOnClick = () => {
     setshowForm(true)
@@ -46,7 +47,9 @@ function CartItems() {
             <div className="cartProductText">
               <h2>{item.item.nombre}</h2>
               <div>
-              <ItemCount stock={5} initial={item.cant} boton={'Cambiar Cantidad'} />
+                <h5>{item.cant}</h5>
+                <button className='btn btn-margin' onClick={reduceCant}> - </button>
+                <button className='btn btn-margin' onClick={addCant}> + </button>
                 <h5 style={{marginTop:'20px'}}>${item.item.precio * item.cant}</h5>
               </div>
             </div>
