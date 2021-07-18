@@ -10,11 +10,12 @@ function CartItems() {
   const [cantidad, setcantidad] = useState(0)
   const [showForm, setshowForm] = useState(false)
   const [showButton, setshowButton] = useState(true)
-
+  
   const handleOnClick = () => {
     setshowForm(true)
     setshowButton(false)
   }
+
 
   
 
@@ -61,7 +62,7 @@ function CartItems() {
 
       {showButton ? <button className='btn btn-finalizar' onClick={handleOnClick}>Finalizar Compra</button> : null}
 
-      {showForm ? <BuyerForm pagar = {pagar}/>: null}
+      {showForm ? <BuyerForm pagar = {pagar} productsList={cart}/>: null}
       
     </div>
   );
