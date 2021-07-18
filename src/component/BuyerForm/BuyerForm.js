@@ -17,14 +17,16 @@ function BuyerForm({pagar, productsList, total}) {
 
   const handleOnChange = (e) => {
 		const { name, value } = e.target;
-		console.log(name, value);
+		// console.log(name, value);
     setValues({ ...values, [name]: value });
-    console.log(values)
+    // console.log(values)
 	};
 
   const handleOnSubmit = (e) => {
-    
-  };
+		e.preventDefault();
+		pagar(values);
+		setValues({ ...initialOrder });
+	};
 
     return (
         <div>
@@ -36,7 +38,7 @@ function BuyerForm({pagar, productsList, total}) {
           <input onChange={handleOnChange} type="text" placeholder='Ciudad' id='ciudad'  className='input' value={values.ciudad} name='ciudad'/>
           <input onChange={handleOnChange} type="text" placeholder='Direccion' id='direccion' className='input' value ={values.direccion} name='direccion'/>
           <input onChange={handleOnChange} type="text" placeholder='Telefono' id='telefono' className='input' value={values.telefono} name='telefono'/>
-          <button className='btn btn-form' onClick={pagar}>Pagar</button>
+          <button className='btn btn-form' onClick={handleOnSubmit}>Pagar</button>
         </form>
       </div>
         </div>

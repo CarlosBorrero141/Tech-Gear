@@ -6,7 +6,7 @@ import "./CartItems.css";
 import {db} from '../../firebase'
 
 function CartItems() {
-  const { cart } = useContext(CartContext);
+  const { cart, setcart, defaultValue, setcantItems } = useContext(CartContext);
   const [cantidad, setcantidad] = useState(0)
   const [showForm, setshowForm] = useState(false)
   const [showButton, setshowButton] = useState(true)
@@ -26,6 +26,8 @@ function CartItems() {
 		console.log(object);
 		await db.collection('orders').doc().set(object);
 		console.log('Nueva orden creada!');
+    setcart(defaultValue);
+    setcantItems(0)
   }
 
  
@@ -62,7 +64,7 @@ function CartItems() {
 
       {showButton ? <button className='btn btn-finalizar' onClick={handleOnClick}>Finalizar Compra</button> : null}
 
-      {showForm ? <BuyerForm pagar = {pagar} productsList={cart}/>: null}
+      {showForm ? <BuyerForm pagar = {pagar} productsList={cart} total ={total  }/>: null}
       
     </div>
   );
