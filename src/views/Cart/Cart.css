@@ -22,3 +22,9 @@ h2, h5{
 .cartProductText{
   margin: 0 auto;
 }
+
+.btn{
+    color: #ffff  !important;
+    background-color: rgb(102, 45, 145)!important;
+   
+}

@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import BuyerForm from "../BuyerForm/BuyerForm";
 import ItemCount from "../ItemCount/ItemCount";
 import "./CartItems.css";
+import {db} from '../../firebase'
 
 function CartItems() {
   const { cart } = useContext(CartContext);
@@ -15,8 +16,15 @@ function CartItems() {
     setshowButton(false)
   }
 
-  const pagar = () => {
-    
+  
+
+  const pagar = async (object) => {
+    // El Objeto que recibimos por parametro nos trae el state
+		// desde el componente FormComponent
+		// console.log('Hice Click');
+		console.log(object);
+		await db.collection('orders').doc().set(object);
+		console.log('Nueva orden creada!');
   }
 
  

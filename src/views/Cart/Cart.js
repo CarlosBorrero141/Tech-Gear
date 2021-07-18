@@ -12,7 +12,7 @@ function Cart() {
             <div>
             <h2>El Carrito esta Vacio</h2>
             <Link to = '/'>
-            <button>Volver a la tienda</button>
+            <button className = "btn">Volver a la tienda</button>
             </Link>
             </div>
         )
