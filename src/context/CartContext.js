@@ -38,12 +38,13 @@ export const CartProvider = ({ defaultValue = [], children }) => {
   };
 
   const reduceCant = (itemID) => {
-    const reduceItem = cart.find((item) => item.id !== itemID)
-    let itemsCart = cantItems;
-    reduceItem.cant --;
-    itemsCart --;
-    setcantItems(itemsCart)
-    console.log(reduceItem);
+    const reduceItem = cart.find((item) => item.item.id !== itemID)
+    console.log(reduceItem)
+    // let itemsCart = cantItems;
+    // reduceItem.cant --;
+    // itemsCart --;
+    // setcantItems(itemsCart);
+    // console.log(reduceItem);
   }
 
   const addCant = (itemID) => {
