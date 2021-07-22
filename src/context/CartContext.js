@@ -5,6 +5,7 @@ export const CartContext = createContext();
 export const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setcart] = useState(defaultValue);
   const [cantItems, setcantItems] = useState(0);
+  const [order, setorder] = useState(false)
 
   const handleAdd = (item, cant) => {
     if (cart.length !== 0) {
@@ -58,7 +59,7 @@ export const CartProvider = ({ defaultValue = [], children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems, reduceCant, setcart, defaultValue, setcantItems, addCant }}
+      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems, reduceCant, setcart, defaultValue, setcantItems, addCant, order, setorder }}
     >
       {children}
     </CartContext.Provider>

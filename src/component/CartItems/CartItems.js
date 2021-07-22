@@ -4,13 +4,15 @@ import BuyerForm from "../BuyerForm/BuyerForm";
 
 import "./CartItems.css";
 import {db} from '../../firebase'
+import OrderReview from "../OrderReview/OrderReview";
 
 function CartItems() {
-  const { cart, setcart, defaultValue, setcantItems, reduceCant, addCant } = useContext(CartContext);
+  const { cart, setcart, defaultValue, setcantItems, reduceCant, addCant, order, setorder } = useContext(CartContext);
   const [cantidad, setcantidad] = useState(0)
   const [showForm, setshowForm] = useState(false)
   const [showButton, setshowButton] = useState(true)
-  const [order, setorder] = useState(false)
+  
+
   
   const handleOnClick = () => {
     setshowForm(true)
@@ -27,8 +29,10 @@ function CartItems() {
 		console.log(object);
 		await db.collection('orders').doc().set(object);
 		console.log('Nueva orden creada!');
-    setcart(defaultValue);
+    setcart(defaultValue)
     setcantItems(0)
+    setorder(true)
+    setshowForm(false)
   }
 
  
@@ -37,7 +41,7 @@ function CartItems() {
   let total = 0;
   return (
     <div>
-      {cart.map((item) => {
+      {order ?  <OrderReview/>:cart.map((item) => {
         
         return (
           
@@ -60,7 +64,8 @@ function CartItems() {
         total = item.item.precio * item.cant + total;
         return null;
       })}
-      <h2>Precio Total: ${total}</h2>
+      {order ? null: <h2>Precio Total: ${total}</h2>}
+      
       {console.log(total)}
 
      
