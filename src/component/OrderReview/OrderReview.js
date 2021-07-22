@@ -6,7 +6,7 @@ import { CartContext } from "../../context/CartContext";
 function OrderReview({orderID}) {
     const { reiniciar } = useContext(CartContext);
     const [order, setorder] = useState({})
-    let orden = []
+    
     
   
     let idOrder = orderID
