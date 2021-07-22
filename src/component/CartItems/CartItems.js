@@ -7,10 +7,11 @@ import {db} from '../../firebase'
 import OrderReview from "../OrderReview/OrderReview";
 
 function CartItems() {
-  const { cart, setcart, defaultValue, setcantItems, reduceCant, addCant, order, setorder } = useContext(CartContext);
-  const [cantidad, setcantidad] = useState(0)
+  const { cart, clearCart, clearCartCant, reduceCant, addCant, order, changeOrder } = useContext(CartContext);
+
   const [showForm, setshowForm] = useState(false)
   const [showButton, setshowButton] = useState(true)
+  const [id, setid] = useState('')
   
 
   
@@ -19,29 +20,37 @@ function CartItems() {
     setshowButton(false)
   }
 
-
-  
-
-  const pagar = async (object) => {
-    // El Objeto que recibimos por parametro nos trae el state
-		// desde el componente FormComponent
-		// console.log('Hice Click');
-		console.log(object);
-		await db.collection('orders').doc().set(object);
-		console.log('Nueva orden creada!');
-    setcart(defaultValue)
-    setcantItems(0)
-    setorder(true)
+  const orderView = () =>{
+    
+    clearCart()
+    clearCartCant()
+    changeOrder()
     setshowForm(false)
   }
 
+
+  
+
+  const pagar = (object) => {
+   
+    db.collection('orders').add(object)
+    .then(
+      doc=>{setid(doc.id)},
+      console.log(id)
+    
+      )
+    orderView()
+  }
+
+ 
+
  
   
-  console.log(cart);
+  console.log(id)
   let total = 0;
   return (
     <div>
-      {order ?  <OrderReview/>:cart.map((item) => {
+      {order ?  <OrderReview orderID={id}/>:cart.map((item) => {
         
         return (
           

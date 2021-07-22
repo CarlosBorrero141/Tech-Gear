@@ -38,14 +38,18 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     setcart(defaultValue);
   };
 
+  const clearCartCant = () => {
+    setcantItems(0)
+  }
+
   const reduceCant = (itemID) => {
     const reduceItem = cart.find((item) => item.item.id !== itemID)
     console.log(reduceItem)
-    // let itemsCart = cantItems;
-    // reduceItem.cant --;
-    // itemsCart --;
-    // setcantItems(itemsCart);
-    // console.log(reduceItem);
+   let itemsCart = cantItems;
+   reduceItem.cant --;
+   itemsCart --;
+   setcantItems(itemsCart);
+   console.log(reduceItem);
   }
 
   const addCant = (itemID) => {
@@ -57,9 +61,17 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     console.log(itemsModify);
   }
 
+  const changeOrder = () =>{
+    setorder(true)
+  }
+
+  const reiniciar = () => {
+    setorder(false)
+  }
+
   return (
     <CartContext.Provider
-      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems, reduceCant, setcart, defaultValue, setcantItems, addCant, order, setorder }}
+      value={{ cart, handleAdd, removeFromCart, clearCart, cantItems, reduceCant, clearCartCant, addCant, order, changeOrder, reiniciar }}
     >
       {children}
     </CartContext.Provider>
