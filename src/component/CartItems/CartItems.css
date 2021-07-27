@@ -24,6 +24,8 @@ h2, h5{
   margin: 0 auto;
 }
 
+
+
 .formulario{
     display: flex;
     flex-direction: column;
@@ -58,3 +60,8 @@ h2, h5{
     margin: 40px 0;
 }
 
+.delete{
+    margin-right: 30px;
+    background-color: transparent;
+    border: none;
+}
