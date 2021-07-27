@@ -7,6 +7,7 @@ function Menu() {
   return (
     <div>
       <div className="navegacion">
+        <ul>
         <NavLink className='link' activeStyle={{color: "#ffff"}} exact to='/'>Inicio</NavLink>
         <NavLink className='link' activeStyle={{color: "#ffff"}} to='/promociones'>Promociones</NavLink>
         <NavLink className='link' activeStyle={{color: "#ffff"}} to='/categorias'>Categorias</NavLink>
@@ -14,6 +15,7 @@ function Menu() {
         <li className="link">
         <CartWidget />
         </li>
+        </ul>
         
       </div>
       
