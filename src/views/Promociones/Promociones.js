@@ -5,7 +5,7 @@ import './Promociones.css'
 function Promociones() {
     return (
         <div>
-            <h1 className='tituloSeccion'>Promociones</h1>
+            
             <PromocionesListContainer/>
         </div>
     )
