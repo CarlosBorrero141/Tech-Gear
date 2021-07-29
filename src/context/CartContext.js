@@ -29,9 +29,12 @@ export const CartProvider = ({ defaultValue = [], children }) => {
   };
 
   const removeFromCart = (itemID, cant) => {
-    const newItems = cart.filter((item) => item.id !== itemID);
-    setcart(newItems);
-    setcantItems(cantItems - cant)
+    let id = itemID
+    const newCart = cart.filter(item => item.id !== id);
+    setcart(newCart)
+    console.log(itemID)
+    
+    // setcantItems(cantItems - cant)
   };
 
   const clearCart = () => {
