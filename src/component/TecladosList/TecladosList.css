@@ -9,3 +9,12 @@
     color: white;
     padding-top: 100px;
 }
+.tituloTeclado{
+    position: absolute;
+    z-index: 1;
+    font-size:80px;
+    color: rgb(154, 32, 248);
+    font-weight: 700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+
+}

@@ -32,7 +32,10 @@ function TecladosList() {
     if(productos.length > 0){
         return (
             <div>
-            <h2 className='tituloSeccion'>Teclados</h2>
+                <div className='bannerContainer'>
+                    <h2 className='tituloTeclado'>Teclados</h2>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/banner01_54ba5e32-c45b-4ddb-b9d9-a806a2dcb21d.jpeg?alt=media&token=97e4979a-cf35-46d9-956b-15f337cdf542" alt="" className='banner' />
+                </div>
             <div className='List'>
                 
     

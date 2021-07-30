@@ -38,7 +38,7 @@ function CardItem  ({prods}) {
           <Card.Header className='nombre'>{prods.nombre}</Card.Header>
           
           <Card.Meta>
-            {prods.precio}
+            ${prods.precio}
           </Card.Meta>
           
         </Card.Content>

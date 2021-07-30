@@ -64,8 +64,8 @@ function CartItems() {
               <h2>{item.item.nombre}</h2>
               <div>
                 <h5>{item.cant}</h5>
-                <button className='btn btn-margin' onClick={reduceCant}> - </button>
-                <button className='btn btn-margin' onClick={addCant}> + </button>
+                <button className='btn btn-margin' onClick={() => reduceCant(item.item.id)}> - </button>
+                <button className='btn btn-margin' onClick={() => addCant(item.item.id)}> + </button>
                 <h5 style={{ marginTop: '20px' }}>${item.item.precio * item.cant}</h5>
               </div>
             </div>

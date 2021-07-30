@@ -5,7 +5,7 @@ import './CategoriaListContainer.css'
 
 function CategoriaListContainer() {
     return (
-        <div>
+        <div className='categoriasListContainer'>
             
             <TecladosList/>
             <MouseList/>

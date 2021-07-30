@@ -30,11 +30,9 @@ export const CartProvider = ({ defaultValue = [], children }) => {
 
   const removeFromCart = (itemID, cant) => {
     let id = itemID
-    const newCart = cart.filter(item => item.id !== id);
+    const newCart = cart.filter((item) => item.item.id !== id);
     setcart(newCart)
-    console.log(itemID)
-    
-    // setcantItems(cantItems - cant)
+    setcantItems(cantItems - cant)
   };
 
   const clearCart = () => {
@@ -46,22 +44,19 @@ export const CartProvider = ({ defaultValue = [], children }) => {
   }
 
   const reduceCant = (itemID) => {
-    const reduceItem = cart.find((item) => item.item.id !== itemID)
-    console.log(reduceItem)
+    const reduceItem = cart.find((item) => item.item.id === itemID)
    let itemsCart = cantItems;
    reduceItem.cant --;
    itemsCart --;
    setcantItems(itemsCart);
-   console.log(reduceItem);
   }
 
   const addCant = (itemID) => {
-    const itemsModify = cart.find((item) => item.id !== itemID)
+    const itemsModify = cart.find((item) => item.item.id === itemID)
     let itemsCart = cantItems;
     itemsModify.cant ++;
     itemsCart ++;
     setcantItems(itemsCart)
-    console.log(itemsModify);
   }
 
   const changeOrder = () =>{

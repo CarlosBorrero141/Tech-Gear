@@ -30,7 +30,10 @@ function MouseList() {
 if(productos.length > 0){
     return (
         <div>
-        <h2 className='tituloSeccion'>Mouse</h2>
+        <div className='bannerContainer'>
+                    <h2 className='tituloMouse'>Mouse</h2>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/b94e950c-9bc8-42b8-b15c-c11fd88dfdf3._CR0%2C0%2C970%2C300_PT0_SX970__.jpg?alt=media&token=96bd2679-f180-4f69-9dbb-1aa7888bf503" alt="" className='banner' />
+                </div>
         <div className='List'>
             
 
