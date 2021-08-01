@@ -24,7 +24,20 @@ A continuacion encontraras una vista previa de las paginas de **Promociones** y 
 <img src='https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/2.png?alt=media&token=29397783-2ad6-4c8e-9d82-8dce482a78e5' width='800'>
 <img src='https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/3.png?alt=media&token=289aef30-28c2-44da-b885-69bd76bab82f' width='800'>
 
-En el carrito encontras opciones
+En el carrito encontras opciones para limpiar el carrito en la parte superior derecha; en cada item encontras opciones para aumentar o disminuir la cnatidad y borrar el item de la lista. Al final del carrito se encuentra el boton de **Finalizar Compra** el cual desplegara un menu para los datos del pedido como se observa en la imagen 2, y al llenar los datos y hacer click en el boton **Pagar** se mostrara un resumen de la orden con el id de la orde y los datos de la misma como se observa en la imagen 3.
+
+**Imagen Carrito 1**
+
+<img src='https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/4.png?alt=media&token=16f6fff7-db89-41aa-a542-2cff2f4eae0a' width='800'>
+
+**Imagen Carrito 2**
+
+<img src='https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/5.png?alt=media&token=8654da87-c1fa-43d7-addd-c3ad7bc2fdb0' width='800'>
+
+**Imagen Carrito 3**
+
+<img src='https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/6.png?alt=media&token=6b96d5db-5cc3-46d0-bfe7-30b53110f6ea' width='800'>
+
 
 ## Dependencias
 
