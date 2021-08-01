@@ -40,9 +40,9 @@ En el carrito encontras opciones para limpiar el carrito en la parte superior de
 
 
 ## Dependencias
+El proyecto entero esta hecho sobre [React v17.0.2] y para la base de datos utilicé [Firebase v8.7.1](https://firebase.google.com/support/release-notes/js).
+Tambien incluye las dependencias de **Semantic UI React**, de la cual uso el componente de card para mostrar los items de la tienda; y para las fuentes usa [Google Fonts](https://fonts.google.com/).
 
-Para este proyecto decidí **no** usar ninguna librería de *CSS* para poder, de paso, practicar mi *Styling* que estaba un poco oxidado.
-Para las fuentes usé [Google Fonts](https://fonts.google.com/).
-Y último pero no menos importante, el proyecto entero esta hecho sobre [React v16.13.1
-](https://reactjs.org/blog/2020/02/26/react-v16.13.0.html) [Node v12.16.3](https://nodejs.org/en/blog/release/v12.16.3/) y para la base de datos utilicé [Firebase v7.2.0](https://firebase.google.com/support/release-notes/js).
+
+
 
