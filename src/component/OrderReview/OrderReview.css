@@ -1,0 +1,36 @@
+.orderReview{
+    background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.1)
+    );
+    width: 98%; 
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 1px;
+}
+
+.tituloOrden{
+    font-size:80px;
+    color: rgb(154, 32, 248);
+    font-weight: 700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+
+}
+
+.orden{
+    text-align: left;
+    margin: 20px 0 20px 40px;
+}
+
+.orden span{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.btn{
+    color: #ffff  !important;
+    background-color: rgb(102, 45, 145)!important;
+    padding: 10px 20px;
+    font-size:20px;
+}

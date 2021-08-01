@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import {db} from '../../firebase'; 
 import { CartContext } from "../../context/CartContext";
-
+import './OrderReview.css'
 
 function OrderReview({orderID}) {
     const { reiniciar } = useContext(CartContext);
@@ -34,17 +34,19 @@ function OrderReview({orderID}) {
     },[idOrder])
     if(order){
         return (
-            <div>
-                <h2>Orden</h2>
-                <h2>Orden ID: {order.id}</h2>
-                <h2>Nombre: {order.nombre}  </h2>
-                <h2>Pais: {order.pais} </h2>
-                <h2>Ciudad: {order.ciudad} </h2>
-                <h2>Direccion: {order.direccion} </h2>
-                <h2>Telefono: {order.telefono} </h2>
-                <h2>Total: ${order.precioTotal} </h2> 
+            <div className='orderReview'>
+                <h2 className='tituloOrden'>Orden</h2>
+                <div className='orden'>
+                    <h2> <span> Orden ID: </span> {order.id}</h2>
+                    <h2> <span> Nombre: </span>   {order.nombre}  </h2>
+                    <h2> <span> Pais: </span>  {order.pais} </h2>
+                    <h2> <span> Ciudad: </span>  {order.ciudad} </h2>
+                    <h2> <span> Direccion: </span>  {order.direccion} </h2>
+                    <h2> <span> Telefono: </span>  {order.telefono} </h2>
+                    <h2> <span> Total: </span> ${order.precioTotal} </h2>                     
+                </div>
     
-                <button onClick={reiniciar} >Hacer Otra compra</button>
+                <button className='btn' onClick={reiniciar} >Hacer Otra compra</button>
                 
             </div>
         )
