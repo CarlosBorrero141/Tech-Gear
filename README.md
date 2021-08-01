@@ -17,7 +17,7 @@ Correr el proyecto es simple como comerse unas oreo, a continuación, listo los 
 
 ## Navegabilidad
 
-<img src='https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/1.png?alt=media&token=0848653e-2a3e-4d2f-9d47-f6523cf92757' width='200'>
+<img src='https://firebasestorage.googleapis.com/v0/b/tech-gear-cc0a9.appspot.com/o/1.png?alt=media&token=0848653e-2a3e-4d2f-9d47-f6523cf92757'>
 
 
  
