@@ -42,6 +42,11 @@ function CartItems() {
     orderView()
   }
 
+  const limpiarCarrito = () => {
+    clearCart();
+    clearCartCant();
+  }
+
   
 
 
@@ -52,6 +57,7 @@ function CartItems() {
   let total = 0;
   return (
     <div>
+      <button onClick={limpiarCarrito} className="btn btn-limpiarCarrito">LimpiarCarrito</button>
       {order ? <OrderReview orderID={id} /> : cart.map((item) => {
 
         return (

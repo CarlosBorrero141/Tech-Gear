@@ -65,3 +65,7 @@ h2, h5{
     background-color: transparent;
     border: none;
 }
+
+.btn-limpiarCarrito{
+    margin: 30px 0 10px 89%;
+}
