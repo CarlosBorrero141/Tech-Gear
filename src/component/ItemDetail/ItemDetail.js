@@ -36,7 +36,7 @@ function ItemDetail({ productId }) {
     
 
   useEffect(() => {
-    getItemDetail();
+    return getItemDetail();
   }, [itemID]);
 
   return (
