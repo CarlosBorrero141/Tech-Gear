@@ -31,6 +31,7 @@ function OrderReview({orderID}) {
     console.log(order)
     useEffect(()=>{
         getOrders();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[idOrder])
     if(order){
         return (

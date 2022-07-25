@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import CardItem from '../CardItem/CardItem.js'
 import './PromocionesList.css'
-import axios from 'axios'
+
 import {db} from '../../firebase'
 
 
@@ -24,7 +24,7 @@ function PromocionesList() {
 
     useEffect(() => {
         getPromociones();
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]) ;
 
 
